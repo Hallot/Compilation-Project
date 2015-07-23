@@ -1,0 +1,13 @@
+parser.cmo: type.cmi parser.cmi
+parser.cmx: type.cmi parser.cmi
+graph.cmo: type.cmi
+graph.cmx: type.cmi
+to_dot.cmo: type.cmi graph.cmo
+to_dot.cmx: type.cmi graph.cmx
+type.cmi:
+interactive.cmo: type.cmi to_dot.cmo parser.cmi graph.cmo
+interactive.cmx: type.cmi to_dot.cmx parser.cmx graph.cmx
+main.cmo: type.cmi to_dot.cmo parser.cmi graph.cmo
+main.cmx: type.cmi to_dot.cmx parser.cmx graph.cmx
+parser.cmi: type.cmi
+type.cmi:
